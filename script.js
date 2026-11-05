@@ -15,11 +15,23 @@ function togglePassword(id, button) {
   icon.classList.toggle("fa-eye-slash", showingPassword);
 }
 
+const rememberMeStorageKey = "loginRememberMe";
+const rememberMeInput = document.getElementById("rememberMe");
+if (rememberMeInput) {
+  rememberMeInput.checked =
+    localStorage.getItem(rememberMeStorageKey) === "true";
+}
+
 /*    DEMO SUBMIT  */
 
 document.querySelectorAll("form").forEach((form) => {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+    const rememberMe = this.querySelector("#rememberMe");
+    if (rememberMe) {
+      localStorage.setItem(rememberMeStorageKey, String(rememberMe.checked));
+    }
+
     const button = this.querySelector(".main-btn");
     const oldText = button.textContent;
     button.textContent = "✓ SUCCESS";
