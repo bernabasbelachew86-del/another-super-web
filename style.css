@@ -298,9 +298,56 @@ h1 {
   accent-color: #0072ff;
 }
 
+.form-message {
+  min-height: 18px;
+  margin: -12px 0 10px;
+  color: #08733c;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.form-message.is-error {
+  color: #b42318;
+}
+
 .options a {
   color: #006cff;
   text-decoration: none;
+}
+
+body[data-page="dashboard"] {
+  min-height: 100vh;
+  max-height: none;
+  overflow: auto;
+  padding: 24px;
+}
+
+.dashboard-card {
+  position: relative;
+  z-index: 1;
+  width: min(520px, 100%);
+  padding: 44px;
+  border-radius: 32px;
+  background: #e7ebf0;
+  box-shadow:
+    20px 20px 40px rgba(163, 177, 198, 0.65),
+    -20px -20px 40px rgba(255, 255, 255, 0.95);
+  text-align: center;
+}
+
+.dashboard-card .subtitle {
+  margin-bottom: 24px;
+}
+
+.demo-notice {
+  margin-bottom: 24px;
+  color: #7c858e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.dashboard-card .main-btn {
+  max-width: 220px;
 }
 
 .main-btn {
