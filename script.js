@@ -70,6 +70,11 @@ if (rememberMeInput) {
 const loginForm = document.getElementById("loginForm");
 if (loginForm) {
   loginForm.addEventListener("submit", async (event) => {
+    if (!loginForm.reportValidity()) {
+      event.preventDefault();
+      return;
+    }
+
     event.preventDefault();
     const message = document.getElementById("loginMessage");
     const email = document.getElementById("loginEmail").value.trim().toLowerCase();
@@ -106,6 +111,11 @@ if (loginForm) {
 const signupForm = document.getElementById("signupForm");
 if (signupForm) {
   signupForm.addEventListener("submit", async (event) => {
+    if (!signupForm.reportValidity()) {
+      event.preventDefault();
+      return;
+    }
+
     event.preventDefault();
     const message = document.getElementById("signupMessage");
     const name = document.getElementById("signupName").value.trim();
