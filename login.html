@@ -1,9 +1,9 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Login & Sign Up Form UI | Bernas.com"></title>
+    <title>Login &amp; Sign Up Form UI | Bernas.com</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
@@ -27,7 +27,7 @@
           <h1>Welcome</h1>
           <p class="subtitle">Login to continue</p>
 
-          <form>
+          <form id="loginForm">
             <!--Email-->
             <div class="input-group">
               <div class="electric-glow"></div>
@@ -70,6 +70,7 @@
               </label>
               <a href="#"> Forgot Password? </a>
             </div>
+            <p class="form-message" id="loginMessage" role="status" aria-live="polite"></p>
             <button type="submit" class="main-btn">Login</button>
             <div class="switch-area">
               <span> Don`t have an account? </span>
@@ -93,7 +94,7 @@
           <h1>Create Account</h1>
           <p class="subtitle">Start your journey with me.</p>
 
-          <form>
+          <form id="signupForm">
             <!--Name-->
             <div class="input-group">
               <div class="electric-glow"></div>
@@ -131,6 +132,7 @@
                 id="signupPassword"
                 placeholder=""
                 autocomplete="new-password"
+                minlength="8"
                 required
               />
               <label for="signupPassword"> Password </label>
@@ -152,11 +154,13 @@
                 id="confirmPassword"
                 placeholder=""
                 autocomplete="new-password"
+                minlength="8"
                 required
               />
               <label for="confirmPassword"> ConfirmPassword </label>
             </div>
 
+            <p class="form-message" id="signupMessage" role="status" aria-live="polite"></p>
             <button type="submit" class="main-btn">CREATE ACCOUNT</button>
           </form>
 
@@ -175,5 +179,5 @@
       </div>
     </div>
   </body>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </html>
