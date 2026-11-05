@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Demo dashboard for the Bernas login form."
+    />
+    <title>Dashboard | Bernas.com</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="dashboard">
+    <div class="bg-circle bg1"></div>
+    <div class="bg-circle bg2"></div>
+    <div class="bg-circle bg3"></div>
+
+    <main class="dashboard-card">
+      <div class="logo" aria-hidden="true">
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <h1 id="dashboardWelcome">Loading your dashboard...</h1>
+      <p class="subtitle">You are signed in to the demo.</p>
+      <p class="demo-notice">
+        This static demo stores account data in this browser only. It is not a
+        production authentication system.
+      </p>
+      <button type="button" class="main-btn" id="logoutButton">Log out</button>
+    </main>
+  </body>
+</html>
